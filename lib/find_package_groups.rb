@@ -6,8 +6,8 @@ require "json"
 require "optparse"
 
 options = {}
-OptionParser.new do |parser|
-  parser.banner = "Usage: find_package_groups [options]"
+parser = OptionParser.new do |parser|
+  parser.banner = "Usage: find_package_groups [options] SLUG\n    SLUG is a GitHub repo slug (e.g. depfu/package-groups"
 
   parser.on("-v VERSION", "--version=VERSION", "Set Version to look for") do |v|
     options[:version] = v
@@ -20,16 +20,15 @@ OptionParser.new do |parser|
   parser.on("-p PREFIX", "--prefix=PREFIX", "path prefix for packages in repo [packages]") do |prefix|
     options[:prefix] = prefix
   end
-end.parse!
+end
+
+parser.parse!
 
 slug = ARGV[0]
 
 if slug.nil? || slug.strip == ""
-  puts "Depfu's Package Group finder. Automate ALL THE THINGS!"
-  puts
-  puts "Usage: find_package_groups [options] [slug]"
-  puts "slug is GitHub repo slug (e.g. flowbyte/package_group_finder)"
-  puts
+  puts parser.help
+  puts "Missing argument SLUG"
   exit 1
 end
 

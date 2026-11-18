@@ -51,9 +51,17 @@ If you have a ruby toolchain, you can use the `find_package_group` utility:
 
 `bin/find_package_group [owner]/[repo]`
 
-that will scan a typical npm mono repo for packages that can be grouped. This
-tool needs some love, specifically a way to search on a release tag and with a
-specific version to increase the chance of finding all packages.
+that will scan a typical npm mono repo for packages that can be grouped.
+
+### Usage
+
+```bash
+Usage: find_package_groups [options] SLUG
+    SLUG is a GitHub repo slug (e.g. depfu/package-groups
+    -v, --version=VERSION            Set Version to look for
+    -r, --ref=REF                    Use ref instead of default branch
+   -p, --prefix=PREFIX              path prefix for packages in repo (default: packages)
+```
 
 For this to work you need to add `.env` file that contains an env variable
 called `GITHUB_ACCESS_TOKEN` with a personal access token for GitHub to lift
