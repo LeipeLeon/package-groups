@@ -14,6 +14,14 @@
     "activesupport",
     "railties"
   ],
+  "sentry-ruby-core":
+  [
+    "sentry-ruby",
+    "sentry-rails",
+    "sentry-delayed_job",
+    "sentry-resque",
+    "sentry-sidekiq"
+  ],
   "solidus":
   [
     "solidus",
@@ -22,13 +30,5 @@
     "solidus_core",
     "solidus_frontend",
     "solidus_sample"
-  ],
-  "sentry-ruby-core":
-  [
-    "sentry-ruby",
-    "sentry-rails",
-    "sentry-delayed_job",
-    "sentry-resque",
-    "sentry-sidekiq"
   ]
 }
