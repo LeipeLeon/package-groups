@@ -1,4 +1,19 @@
 {
+  "flipper":
+  [
+    "flipper",
+    "flipper-active_record",
+    "flipper-active_support_cache_store",
+    "flipper-api",
+    "flipper-cloud",
+    "flipper-dalli",
+    "flipper-moneta",
+    "flipper-mongo",
+    "flipper-redis",
+    "flipper-rollout",
+    "flipper-sequel",
+    "flipper-ui"
+  ],
   "rails":
   [
     "actioncable",
